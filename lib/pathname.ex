@@ -6,12 +6,9 @@
 defmodule Pathname do
   defstruct address: nil, protocol: nil, protocol_params: nil 
 
-  @type ip_protocol :: :udp | :tcp
-  @type port_number :: 0..65535
-
   @type t :: %Pathname{
     address: String.t,
-    protocol: ip_protocol,
+    protocol: atom,
     protocol_params: []
   }
 
